@@ -1,0 +1,55 @@
+# Rust build output
+/target/
+**/*.rs.bk
+
+# Cargo keeps dependency resolution here for binary/application projects.
+# Do not ignore Cargo.lock unless this repository becomes a reusable library crate.
+
+# Rust tool caches and generated reports
+/.cargo/.package-cache/
+/tarpaulin-report.html
+/coverage/
+/lcov.info
+
+# Embedded Rust / ESP32 generated files
+/.embuild/
+/build/
+/dist/
+*.elf
+*.bin
+*.hex
+*.map
+*.uf2
+*.log
+
+# ESP-IDF / CMake artifacts, if used through esp-idf-sys or mixed tooling
+/sdkconfig
+/sdkconfig.old
+/managed_components/
+/dependencies.lock
+/CMakeFiles/
+/CMakeCache.txt
+/cmake-build-*/
+
+# RustRover / JetBrains IDE local settings
+/.idea/
+*.iml
+*.iws
+*.ipr
+
+# Other editor and OS noise
+/.vscode/
+/.fleet/
+.DS_Store
+Thumbs.db
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
