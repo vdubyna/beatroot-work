@@ -120,6 +120,34 @@ cargo build
 cargo run --bin button-bounce-counter
 ```
 
+## Debounce-варіант
+
+Другий варіант прошивки рахує ті самі raw-фронти на `GPIO15`, але додатково
+має програмний debounce `5 ms`:
+
+```sh
+cargo run --bin button-bounce-debounced
+```
+
+У цьому режимі:
+
+- `raw_falling` / `raw_rising` показують брязкіт без фільтрації;
+- `debounced_presses` має збільшуватися на 1 за одне натискання кнопки-тригера;
+- `debounced_releases` має збільшуватися на 1 за одне відпускання.
+
+Перевірений результат для 3 повних циклів:
+
+```text
+raw_edges=30
+raw_falling=15
+raw_rising=15
+debounced_presses=3
+debounced_releases=3
+```
+
+Тобто кожен фізичний цикл генерує 10 raw-фронтів, але програмний debounce
+залишає тільки одне натискання і одне відпускання.
+
 Додатковий діагностичний сканер GPIO:
 
 ```sh

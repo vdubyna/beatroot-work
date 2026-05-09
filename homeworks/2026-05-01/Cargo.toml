@@ -16,6 +16,12 @@ path = "./src/bin/pin_scanner.rs"
 test = false
 bench = false
 
+[[bin]]
+name = "button-bounce-debounced"
+path = "./src/bin/debounced.rs"
+test = false
+bench = false
+
 [dependencies]
 critical-section = "1.2.0"
 esp-bootloader-esp-idf = { version = "0.4.0", features = ["esp32s3"] }
