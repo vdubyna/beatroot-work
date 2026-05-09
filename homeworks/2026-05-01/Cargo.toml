@@ -1,0 +1,36 @@
+[package]
+edition      = "2024"
+name         = "button-bounce-counter"
+rust-version = "1.88"
+version      = "0.1.0"
+
+[[bin]]
+name = "button-bounce-counter"
+path = "./src/bin/main.rs"
+test = false
+bench = false
+
+[[bin]]
+name = "pin-scanner"
+path = "./src/bin/pin_scanner.rs"
+test = false
+bench = false
+
+[dependencies]
+critical-section = "1.2.0"
+esp-bootloader-esp-idf = { version = "0.4.0", features = ["esp32s3"] }
+esp-hal = { version = "~1.0", features = ["esp32s3", "unstable"] }
+esp-println = { version = "0.16.1", features = ["esp32s3"] }
+
+[profile.dev]
+# Rust debug is too slow on ESP32, so dev builds use some optimization.
+opt-level = "s"
+
+[profile.release]
+codegen-units    = 1
+debug            = 2
+debug-assertions = false
+incremental      = false
+lto              = "fat"
+opt-level        = "s"
+overflow-checks  = false
