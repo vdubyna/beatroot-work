@@ -28,7 +28,7 @@ docs/
 | `homeworks/2026-05-01` | `button-bounce-counter` | Count raw bounce edges | trigger `GPIO17`, drive `GPIO16`, input `GPIO15` |
 | `homeworks/2026-05-01` | `button-bounce-debounced` | Same signal with software debounce | trigger `GPIO17`, drive `GPIO16`, input `GPIO15` |
 | `homeworks/2026-05-01` | `pin-scanner` | GPIO diagnostic scanner | project-specific |
-| `homeworks/2026-05-04` | `ldr-adc-voltage` | LDR divider, calibrated ADC voltage | `GPIO4 / ADC1_CH3` |
+| `homeworks/2026-05-04` | `ldr-adc-voltage` | LDR divider with green/yellow/red LED brightness indicator | LDR `GPIO4 / ADC1_CH3`; LEDs `GPIO15-GPIO17` |
 
 ## Lessons
 

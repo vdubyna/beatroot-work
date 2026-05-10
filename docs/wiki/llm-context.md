@@ -49,7 +49,8 @@
 - `homeworks/2026-04-29` - LED режими, кнопки-модулі на `GPIO6` і `GPIO7`.
 - `homeworks/2026-05-01` - штучний bounce: `GPIO17` trigger, `GPIO16`
   transistor drive, `GPIO15` measured input.
-- `homeworks/2026-05-04` - LDR/ADC, основний вхід `GPIO4 / ADC1_CH3`.
+- `homeworks/2026-05-04` - LDR/ADC, основний вхід `GPIO4 / ADC1_CH3`,
+  індикатор освітлення LED на `GPIO15-GPIO17`.
 
 ## Перші локальні файли для читання
 
